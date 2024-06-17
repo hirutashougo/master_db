@@ -1,0 +1,124 @@
+CREATE TABLE
+	branches_merchandises
+	(
+		branch_office_code CHAR(3) NOT NULL,
+		branch_office_name VARCHAR(3),
+		branch_code CHAR(2)NOT NULL,
+		branch_name VARCHAR(10),
+		merchandise_code CHAR(3) NOT NULL,
+		merchandise_name VARCHAR(10),
+		PRIMARY KEY(branch_office_code, branch_code, merchandise_code)
+	)
+;
+
+SELECT
+	branch_office_code AS '支社コード',
+	branch_office_name AS '支社名',
+	branch_code AS '支店コード',
+	branch_name AS '支店名',
+	merchandise_code AS '商品コード',
+	merchandise_name AS '商品名'
+FROM
+	branches_merchandises
+;
+
+INSERT INTO
+	branches_merchandises
+VALUES
+	(
+		'001',
+		'東京',
+		'01',
+		'渋谷',
+		'001',
+		'石鹸'
+	),
+	(
+		'001',
+		'東京',
+		'01',
+		'渋谷',
+		'002',
+		'タオル'
+	),
+	(
+		'001',
+		'東京',
+		'01',
+		'渋谷',
+		'003',
+		'ハブラシ'
+	),
+	(
+		'001',
+		'東京',
+		'02',
+		'八重洲',
+		'002',
+		'タオル'
+	),
+	(
+		'001',
+		'東京',
+		'02',
+		'八重洲',
+		'003',
+		'ハブラシ'
+	),
+	(
+		'001',
+		'東京',
+		'02',
+		'八重洲',
+		'004',
+		'コップ'
+	),
+	(
+		'001',
+		'東京',
+		'02',
+		'八重洲',
+		'005',
+		'箸'
+	),
+	(
+		'001',
+		'東京',
+		'02',
+		'八重洲',
+		'006',
+		'スプーン'
+	),
+	(
+		'002',
+		'大阪',
+		'01',
+		'堺',
+		'001',
+		'石鹸'
+	),
+	(
+		'002',
+		'大阪',
+		'01',
+		'堺',
+		'002',
+		'タオル'
+	),
+	(
+		'002',
+		'大阪',
+		'02',
+		'豊中',
+		'007',
+		'雑誌'
+	),
+	(
+		'002',
+		'大阪',
+		'02',
+		'豊中',
+		'008',
+		'爪切り'
+	)
+;

@@ -1,0 +1,42 @@
+CREATE TABLE
+	branches
+	(
+		branch_office_code CHAR(3) NOT NULL,
+		branch_code CHAR(2)NOT NULL,
+		branch_name VARCHAR(10),
+		PRIMARY KEY(branch_office_code, branch_code)
+	)
+;
+
+SELECT
+	branch_office_code AS '支店コード',
+	branch_code AS '支店コード',
+	branch_name AS '支店名'
+FROM
+	branches
+;
+
+INSERT INTO
+	branches
+VALUES
+	(
+		'001',
+		'01',
+		'渋谷'
+	),
+	(
+		'001',
+		'02',
+		'八重洲'
+	),
+	(
+		'002',
+		'01',
+		'堺'
+	),
+	(
+		'002',
+		'02',
+		'豊中'
+	)
+;

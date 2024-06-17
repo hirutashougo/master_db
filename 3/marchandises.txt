@@ -1,0 +1,62 @@
+CREATE TABLE
+	merchandises
+	(
+		merchandise_code CHAR(3) NOT NULL,
+		merchandise_name VARCHAR(10),
+		merchandise_class_code CHAR(2),
+		PRIMARY KEY(merchandise_code)
+	)
+;
+
+SELECT
+	merchandise_code AS '商品コード',
+	merchandise_name AS '商品名',
+	merchandise_class_code AS '商品分類コード'
+FROM
+	merchandises
+;
+
+INSERT INTO
+	merchandises
+VALUES
+	(
+		'001',
+		'石鹸',
+		'C1'
+	),
+	(
+		'002',
+		'タオル',
+		'C1'
+	),
+	(
+		'003',
+		'ハブラシ',
+		'C1'
+	),
+	(
+		'004',
+		'コップ',
+		'C1'
+	),
+	(
+		'005',
+		'箸',
+		'C2'
+	),
+	(
+		'006',
+		'スプーン',
+		'C2'
+	),
+	(
+		'007',
+		'雑誌',
+		'C3'
+	),
+	(
+		'008',
+		'爪切り',
+		'C4'
+	)
+;

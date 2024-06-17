@@ -1,0 +1,12 @@
+SELECT
+	branch_office_code AS '支社コード',
+	branch_office_name AS '支社名',
+	branch_code AS '支店コード',
+	branch_name AS '支店名',
+	merchandise_code AS '商品コード',
+	merchandise_name AS '商品名',
+	merchandise_class_code AS '商品分類コード',
+	class_name AS '分類名'
+FROM
+	offices_branches_merchandises
+;

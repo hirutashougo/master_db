@@ -1,0 +1,18 @@
+演習2-2
+
+問題
+
+ハードウェアのサイジングを行うために、
+現行システムのハードウェアリソースの情報を取得する。
+そのためのOSコマンドを、OS別に調べて整理する
+
+
+回答
+
+Windows  →  systeminfo
+
+Mac OS  →  system_profiler
+
+Linux  →  hwinfo
+
+など

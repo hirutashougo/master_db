@@ -1,0 +1,28 @@
+CREATE TABLE
+	branch_offices
+	(
+		branch_office_code CHAR(3) NOT NULL,
+		branch_office_name VARCHAR(3),
+		PRIMARY KEY(branch_office_code)
+	)
+;
+
+SELECT
+	branch_office_code AS '支社コード',
+	branch_office_name AS '支社名'
+FROM
+	branch_offices
+;
+
+INSERT INTO
+	branch_offices
+VALUES
+	(
+		'001',
+		'東京'
+	),
+	(
+		'002',
+		'大阪'
+	)
+;

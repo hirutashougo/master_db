@@ -1,0 +1,48 @@
+演習5-1-3
+
+問題：
+最も取り扱い商品が多い支店の支店コードと商品数。
+
+回答：
+SQL文：
+SELECT
+	branches_merchandises.branch_office_code AS '支社コード',
+	branches_merchandises.branch_code AS '支店コード',
+	COUNT(*) AS '商品数'
+FROM
+	branches_merchandises
+INNER JOIN
+	merchandises ON
+	branches_merchandises.merchandise_code = merchandises.merchandise_code
+GROUP BY
+	branches_merchandises.branch_office_code,
+	branches_merchandises.branch_code
+ORDER BY
+	COUNT(*) DESC
+LIMIT
+	/*商品数の一番多い支店のみ対象*/
+	1
+;
+
+出力結果：
++------------+------------+--------+
+| 支社コード | 支店コード | 商品数 |
++------------+------------+--------+
+| 001        | 02         |      5 |
++------------+------------+--------+
+
+SELECT
+	branches_merchandises.branch_office_code AS '支社コード',
+	branches_merchandises.branch_code AS '支店コード',
+	COUNT(*) AS '商品数'
+FROM
+	branches_merchandises
+GROUP BY
+	branches_merchandises.branch_office_code,
+	branches_merchandises.branch_code
+ORDER BY
+	COUNT(*) DESC
+LIMIT
+	/*商品数の一番多い支店のみ対象*/
+	1
+;

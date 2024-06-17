@@ -1,0 +1,26 @@
+演習9-2
+
+問題
+
+入れ子区間モデルの「左端」及び「右端」の列を実装するためのデータ型を、
+以下のDBMSの最新バージョンについて調べよ
+
+・Oracle
+・SQLServer
+・DB2
+・PostgreSQL
+・MySQL
+
+
+回答
+
+・Oracle → BINARY_FLOAT、BINARY_DOUBLE
+
+・SQLServer → float、real
+	
+・DB2 → REAL、DOUBLE
+	
+・PostgreSQL → real、double、precision
+	
+・MySQL → DECIMAL、DEC、NUMERIC、FLOAT、DOUBLE
+	

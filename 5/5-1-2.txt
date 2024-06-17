@@ -1,0 +1,43 @@
+演習5-1-2
+
+問題：
+支社/支店別の取り扱い商品の一覧。結果には支社名、支店名、商品名を含むものとする。
+
+回答：
+SQL文：
+SELECT
+	branch_offices.branch_office_name AS '支社名',
+	branches.branch_name AS '支店名',
+	merchandises.merchandise_name AS '商品名'
+FROM
+	branches_merchandises
+INNER JOIN
+	branch_offices ON
+	branches_merchandises.branch_office_code = branch_offices.branch_office_code
+INNER JOIN
+	branches ON
+	branches_merchandises.branch_code = branches.branch_code
+	AND
+	branches_merchandises.branch_office_code = branches.branch_office_code
+INNER JOIN
+	merchandises ON
+	branches_merchandises.merchandise_code = merchandises.merchandise_code
+;
+
+出力結果：
++--------+--------+----------+
+| 支社名 | 支店名 | 商品名   |
++--------+--------+----------+
+| 東京   | 渋谷   | 石鹸     |
+| 東京   | 渋谷   | タオル   |
+| 東京   | 渋谷   | ハブラシ |
+| 東京   | 八重洲 | タオル   |
+| 東京   | 八重洲 | ハブラシ |
+| 東京   | 八重洲 | コップ   |
+| 東京   | 八重洲 | 箸       |
+| 東京   | 八重洲 | スプーン |
+| 大阪   | 堺     | 石鹸     |
+| 大阪   | 堺     | タオル   |
+| 大阪   | 豊中   | 雑誌     |
+| 大阪   | 豊中   | 爪切り   |
++--------+--------+----------+

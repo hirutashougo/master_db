@@ -1,0 +1,42 @@
+CREATE TABLE
+	merchandise_classes
+	(
+		merchandise_class_code CHAR(2),
+		class_name VARCHAR(10),
+		merchandise_count INT,
+		PRIMARY KEY(merchandise_class_code)
+	)
+;
+
+SELECT
+	merchandise_class_code AS '商品分類コード',
+	class_name AS '分類名',
+	merchandise_count AS '取扱数'
+FROM
+	merchandise_classes
+;
+
+INSERT INTO
+	merchandise_classes
+VALUES
+	(
+		'C1',
+		'水洗用品',
+		8
+	),
+	(
+		'C2',
+		'食器',
+		2
+	),
+	(
+		'C3',
+		'書籍',
+		1
+	),
+	(
+		'C4',
+		'日用雑貨',
+		1
+	)
+;

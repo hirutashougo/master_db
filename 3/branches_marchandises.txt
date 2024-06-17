@@ -1,0 +1,82 @@
+CREATE TABLE
+	branches_merchandises
+	(
+		branch_office_code CHAR(3) NOT NULL,
+		branch_code CHAR(2)NOT NULL,
+		merchandise_code CHAR(3) NOT NULL,
+		PRIMARY KEY(branch_office_code, branch_code, merchandise_code)
+	)
+;
+
+SELECT
+	branch_office_code AS '支社コード',
+	branch_code AS '支店コード',
+	merchandise_code AS '商品コード'
+FROM
+	branches_merchandises
+;
+
+INSERT INTO
+	branches_merchandises
+VALUES
+	(
+		'001',
+		'01',
+		'001'
+	),
+	(
+		'001',
+		'01',
+		'002'
+	),
+	(
+		'001',
+		'01',
+		'003'
+	),
+	(
+		'001',
+		'02',
+		'002'
+	),
+	(
+		'001',
+		'02',
+		'003'
+	),
+	(
+		'001',
+		'02',
+		'004'
+	),
+	(
+		'001',
+		'02',
+		'005'
+	),
+	(
+		'001',
+		'02',
+		'006'
+	),
+	(
+		'002',
+		'01',
+		'001'
+	),
+	(
+		'002',
+		'01',
+		'002'
+	),
+	(
+		'002',
+		'02',
+		'007'
+	),
+	(
+		'002',
+		'02',
+		'008'
+	)
+;

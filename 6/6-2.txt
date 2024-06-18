@@ -7,7 +7,14 @@ B-treeインデックスの再構成を実施するための具体的な方法�
 
 回答
 
-・
-・
-・
-・
+インデックスの再構成を実施するためのコード
+・Oracle Database
+「ALTER INDEX インデックス名 REBUILD」
+・SQL Server
+「ALTER INDEX インデックス名 ON テーブル名 REBUILD;」
+・DB2
+「REORG INDEX インデックス名;」
+・PostgreSQL
+「REINDEX INDEX インデックス名;」
+・MySQL
+「OPTIMIZE TABLE テーブル名;」

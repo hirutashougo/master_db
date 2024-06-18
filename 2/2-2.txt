@@ -13,6 +13,6 @@ Windows  →  systeminfo
 
 Mac OS  →  system_profiler
 
-Linux  →  hwinfo
+Linux  →  Lshw
 
 など

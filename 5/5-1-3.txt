@@ -5,6 +5,7 @@
 
 回答：
 SQL文：
+/*最も取り扱い商品が多い支店の支店コードと商品数を取得*/
 SELECT
 	branches_merchandises.branch_office_code AS '支社コード',
 	branches_merchandises.branch_code AS '支店コード',
@@ -12,7 +13,8 @@ SELECT
 FROM
 	branches_merchandises
 INNER JOIN
-	merchandises ON
+	merchandises
+ON
 	branches_merchandises.merchandise_code = merchandises.merchandise_code
 GROUP BY
 	branches_merchandises.branch_office_code,

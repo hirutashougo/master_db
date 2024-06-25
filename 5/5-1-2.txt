@@ -5,6 +5,7 @@
 
 回答：
 SQL文：
+/*支社/支店別の取り扱い商品を取得する*/
 SELECT
 	branch_offices.branch_office_name AS '支社名',
 	branches.branch_name AS '支店名',
@@ -12,15 +13,18 @@ SELECT
 FROM
 	branches_merchandises
 INNER JOIN
-	branch_offices ON
+	branch_offices
+ON
 	branches_merchandises.branch_office_code = branch_offices.branch_office_code
 INNER JOIN
-	branches ON
+	branches
+ON
 	branches_merchandises.branch_code = branches.branch_code
-	AND
+AND
 	branches_merchandises.branch_office_code = branches.branch_office_code
 INNER JOIN
-	merchandises ON
+	merchandises
+ON
 	branches_merchandises.merchandise_code = merchandises.merchandise_code
 ;
 

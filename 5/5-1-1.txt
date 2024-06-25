@@ -5,19 +5,16 @@
 
 回答：
 SQL文：
+/*商品の分類名と、分類ごとの商品数を求める*/
 SELECT
 	merchandise_classes.class_name AS '分類名',
 	COUNT(*) AS '商品数'
 FROM
-	(
-		merchandises
-	INNER JOIN
-		merchandise_classes ON
-		merchandises.merchandise_class_code = merchandise_classes.merchandise_class_code
-	)
-LEFT OUTER JOIN
-	branches_merchandises ON
-	branches_merchandises.merchandise_code = merchandises.merchandise_code
+	merchandises
+INNER JOIN
+	merchandise_classes
+ON
+	merchandises.merchandise_class_code = merchandise_classes.merchandise_class_code
 GROUP BY
 	merchandise_classes.class_name
 ORDER BY
@@ -28,8 +25,8 @@ ORDER BY
 +----------+--------+
 | 分類名   | 商品数 |
 +----------+--------+
-| 水洗用品 |      8 |
+| 水洗用品 |      4 |
 | 食器     |      2 |
-| 日用雑貨 |      1 |
 | 書籍     |      1 |
+| 日用雑貨 |      1 |
 +----------+--------+
